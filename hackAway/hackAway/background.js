@@ -7,7 +7,7 @@ function disableBrowserAction() {
 }
 
 function enableBrowserAction() {
-  chrome.browserAction.setIcon({path:"img/enable.png"});
+  chrome.browserAction.setIcon({path:"img/icon.png"});
   chrome.tabs.executeScript(null, {file: "js/start.js"});
 }
 

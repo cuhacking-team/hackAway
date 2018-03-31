@@ -1,24 +1,27 @@
 {
-  "name": "Speech Recognition for Textbox's",
-  "short_name": "Speech Recognition for Textbox's",
-  "description": "Say \"target input\" to add text into any textbox on the web, and \"clear input\" to clear a textbox",
-  "version": "0.0.1",
   "manifest_version": 2,
-  "offline_enabled": false,
+
+  "name": "Ingenious hack",
+  "description": "This extension will analyze a page using voiceover",
+  "version": "0.0.1",
+"offline_enabled": false,
+
   "icons": {
-    "128": "img/enable.png",
-    "64": "img/enable.png",
-    "32": "img/enable.png",
-    "16": "img/enable.png"
+    "128": "img/icon.png",
+    "64": "img/icon.png",
+    "32": "img/icon.png",
+    "16": "img/icon.png"
   },
+
   "browser_action": {
     "default_icon": {
-      "128": "img/enable.png",
-      "64": "img/enable.png",
-      "32": "img/enable.png",
-      "16": "img/enable.png"
-    },
-    "default_title": "Speech Recognition for Textbox's"
+       "128": "img/icon.png",
+       "64": "img/icon.png",
+       "32": "img/icon.png",
+       "16": "img/icon.png"
+     },
+
+   "default_title": "ingenious"
   },
   "background": {
     "scripts": ["background.js"]
@@ -29,7 +32,7 @@
     "run_at": "document_end"
   } ],
   "permissions": [
-    "tabs", "http://*/*", "https://*/*"
+"tabs", "http://*/*", "https://*/*"
   ],
   "update_url": "https://clients2.google.com/service/update2/crx"
 }

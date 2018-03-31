@@ -22,25 +22,25 @@ $(document).ready(function() {
       }
     };
 
-//click button function takes in txt paratmeter and matches it to element in the dom and clicks on the button
-    var clickButton = function(txt) {
-      document.getElementById(txt).click();
-    };
-
-    var scrollUp = function(txt) {
-      document.getElementById(txt).click();
-    };
-
-    var clickButton = function(txt) {
-      document.getElementById(txt).click();
-    };
+// //click button function takes in txt paratmeter and matches it to element in the dom and clicks on the button
+    // var clickButton = function(txt) {
+    //   document.getElementById(txt).click();
+    // };
+//
+//     var scrollUp = function(txt) {
+//       document.getElementById(txt).click();
+//     };
+//
+//     var clickButton = function(txt) {
+//       document.getElementById(txt).click();
+//     };
 
     var commands = {
-      "clear input": clearInput,
+      "erase": clearInput,
       "enter input *search": addText,
-      "click *search": clickButton,
-      "scroll up": scrollUp,
-      "scroll down": scrollDown;
+      // "click *search": clickButton,
+      // "scroll up": scrollUp,
+      // "scroll down": scrollDown;
     };
 
     annyang.addCommands(commands);
