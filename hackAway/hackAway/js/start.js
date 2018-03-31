@@ -27,12 +27,16 @@ $(document).ready(function() {
       document.getElementById(txt).click();
     };
 
-    var scrollUp = function(txt) {
-      document.getElementById(txt).click();
+    var scrollUp = function() {
+
     };
 
-    var clickButton = function(txt) {
-      document.getElementById(txt).click();
+    var scrollDown = function() {
+
+    };
+
+    var findText = function(txt) {
+      str.search(txt);
     };
 
     var commands = {
@@ -41,6 +45,7 @@ $(document).ready(function() {
       "click *search": clickButton,
       "scroll up": scrollUp,
       "scroll down": scrollDown;
+      "find *search": findText;
     };
 
     annyang.addCommands(commands);
