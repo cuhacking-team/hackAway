@@ -40,7 +40,7 @@ $(document).ready(function() {
     };
 
     var commands = {
-      "clear input": clearInput,
+      "erase": clearInput,
       "enter input *search": addText,
       "click *search": clickButton,
       "scroll up": scrollUp,
