@@ -35,12 +35,30 @@ $(document).ready(function() {
 //       document.getElementById(txt).click();
 //     };
 
+//click button function takes in txt paratmeter and matches it to element in the dom and clicks on the button
+    var clickButton = function(txt) {
+      document.getElementById(txt).click();
+    };
+
+    var scrollUp = function() {
+
+    };
+
+    var scrollDown = function() {
+
+    };
+
+    var findText = function(txt) {
+      str.search(txt);
+    };
+
     var commands = {
       "erase": clearInput,
       "enter input *search": addText,
       // "click *search": clickButton,
       // "scroll up": scrollUp,
       // "scroll down": scrollDown;
+
     };
 
     annyang.addCommands(commands);
