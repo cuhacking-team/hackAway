@@ -13,10 +13,12 @@ $(document).ready(function() {
     var addText = function(txt) {
       if ( $("input").is(":focus") ) {
         $("input:focus").val(function(_, oldVal) {
+          console.log(txt);
            return oldVal + txt;
         });
       } else if ( $("textarea").is(":focus") ) {
         $("textarea:focus").val(function(_, oldVal) {
+          console.log(txt);
            return oldVal + txt;
         });
       }
@@ -36,8 +38,10 @@ $(document).ready(function() {
 //     };
 
 //click button function takes in txt paratmeter and matches it to element in the dom and clicks on the button
-    var clickButton = function(txt) {
-      document.getElementById(txt).click();
+    var clickButton = function() {
+document.querySelectorAll("input[value='Google Search']")[0].click();
+
+      // document.getElementById(txt).click();
     };
 
     var scrollUp = function() {
@@ -48,14 +52,15 @@ $(document).ready(function() {
 
     };
 
-    var findText = function(txt) {
-      str.search(txt);
-    };
+    // var findText = function(txt) {
+    //   str.search(txt);
+    // };
 
     var commands = {
       "erase": clearInput,
       "enter input *search": addText,
-      // "click *search": clickButton,
+       // "click *search": clickButton,
+       "click": clickButton,
       // "scroll up": scrollUp,
       // "scroll down": scrollDown;
 
