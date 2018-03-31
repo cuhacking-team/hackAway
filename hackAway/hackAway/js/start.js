@@ -50,12 +50,13 @@ $(document).ready(function() {
 
     var findText = function(txt) {
       str.search(txt);
+      console.log("found text");
     };
 
     var commands = {
       "erase": clearInput,
       "enter input *search": addText,
-      // "click *search": clickButton,
+      "click *search": clickButton,
       // "scroll up": scrollUp,
       // "scroll down": scrollDown;
 
