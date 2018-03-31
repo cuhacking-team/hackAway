@@ -27,10 +27,20 @@ $(document).ready(function() {
       document.getElementById(txt).click();
     };
 
+    var scrollUp = function(txt) {
+      document.getElementById(txt).click();
+    };
+
+    var clickButton = function(txt) {
+      document.getElementById(txt).click();
+    };
+
     var commands = {
       "clear input": clearInput,
       "enter input *search": addText,
       "click *search": clickButton,
+      "scroll up": scrollUp,
+      "scroll down": scrollDown;
     };
 
     annyang.addCommands(commands);
