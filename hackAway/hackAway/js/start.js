@@ -1,5 +1,6 @@
 "use strict";
 
+
 $(document).ready(function() {
   if (annyang) {
     var clearInput = function() {
@@ -62,21 +63,40 @@ $(document).ready(function() {
     // var findText = function(txt) {
     //   str.search(txt);
     // };
-    var openTab = function () {
+    var openWindow = function () {
        window.open("https://www.google.ca", "_blank", "width=500, height=500");
     }
+
+    function hiliter(word) {
+        var rgxp = new RegExp(word, 'g');
+        var repl = '<b style="background-color:#ff0">' + word + '</b>';
+        document.body.innerHTML = document.body.innerHTML.replace(rgxp, repl);
+    }
+
+    var highlight=function (text) {
+      hiliter(text);
+    }
+    // var closeWindow = function () {
+    //   if(confirm("Close Window?")) {
+    //     close();
+    //   }
+    // //  open(location, '_self').close();
+    // }
     var commands = {
       "erase": clearInput,
       "enter input *search": addText,
         "click *search": clickButton,
+"highlight *tag":highlight,
        // "click *search": clickButton,
        "reload":reloadPage,
-       "open":openTab,
+       "open":openWindow,
+       // "close":closeWindow,
 
       // "scroll up": scrollUp,
       // "scroll down": scrollDown;
 
     };
+
 
     annyang.addCommands(commands);
     annyang.start();
