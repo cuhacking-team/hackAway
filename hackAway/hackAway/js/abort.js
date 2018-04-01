@@ -2,6 +2,6 @@
 
 $(document).ready(function() {
   if (annyang) {
-    annyang.abort();
+    // annyang.abort();
   }
 });

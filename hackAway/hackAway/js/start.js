@@ -13,12 +13,11 @@ $(document).ready(function() {
     var addText = function(txt) {
       if ( $("input").is(":focus") ) {
         $("input:focus").val(function(_, oldVal) {
-          console.log(txt);
            return oldVal + txt;
         });
       } else if ( $("textarea").is(":focus") ) {
         $("textarea:focus").val(function(_, oldVal) {
-          console.log(txt);
+
            return oldVal + txt;
         });
       }
@@ -38,29 +37,42 @@ $(document).ready(function() {
 //     };
 
 //click button function takes in txt paratmeter and matches it to element in the dom and clicks on the button
-    var clickButton = function() {
-document.querySelectorAll("input[value='Google Search']")[0].click();
+    var clickButton = function(txt) {
+
+       let tempStr=txt.charAt(0).toUpperCase() + txt.slice(1);
+       // alert(tempStr);
+       console.log(typeof tempStr);
+       var query = "[value=" + tempStr + "]";
+// document.querySelectorAll("input[value=String(txt)]")[0].click();
+        $(query).click();
 
       // document.getElementById(txt).click();
     };
-
-    var scrollUp = function() {
-
-    };
-
-    var scrollDown = function() {
-
-    };
-
+    //
+    // var scrollUp = function() {
+    //
+    // };
+    //
+    // var scrollDown = function() {
+    //
+    // };
+    var reloadPage = function() {
+         location.reload();
+        };
     // var findText = function(txt) {
     //   str.search(txt);
     // };
-
+    var openTab = function () {
+       window.open("https://www.google.ca", "_blank", "width=500, height=500");
+    }
     var commands = {
       "erase": clearInput,
       "enter input *search": addText,
+        "click *search": clickButton,
        // "click *search": clickButton,
-       "click": clickButton,
+       "reload":reloadPage,
+       "open":openTab,
+
       // "scroll up": scrollUp,
       // "scroll down": scrollDown;
 
